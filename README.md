@@ -1,6 +1,8 @@
 # Aplicacion CRUD Java.
 
-
+- Realiza peticiones `GET` a la API de <a src="https://serpapi.com/google-scholar-api">Google Scholar API</a>:
+- Obtiene datos de autores mediante un id o  nombre.
+- Realiza consultas a una DB Mysql.
 ## Instalacion.
 
 ### GitHub:
