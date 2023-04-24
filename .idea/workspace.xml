@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a7cc3d7-63e8-4c1b-ba73-316adf355ce6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/Controller/DBController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/Controller/DBController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/View/DBFilter.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/View/DBFilter.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/View/DBFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/View/DBFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
