@@ -19,6 +19,13 @@ public class DBFilter {
     private JButton buscarButton;
     private JButton buscarButton1;
     private JButton buscarButton2;
+    private JTextField authorIDTextField;
+    private JTextField URLTextField;
+    private JTextField nameTextField;
+    private JTextField emailTextField;
+    private JTextField affiliationsTextField;
+    private JButton editarButton;
+    private JButton eliminarButton;
     private JTextPane textPane1;
 
     public DBFilter() {
@@ -37,7 +44,13 @@ public class DBFilter {
                         String email = res.getString("email");
                         String affiliations = res.getString("affiliatios");
                         textPane1.setText("\nAuthor ID:" + author_id +"\n"+url+ "\nName: " + name + "\nEmail: " + email + "\nAffiliation: " +affiliations);
+                        authorIDTextField.setText(author_id);
+                        URLTextField.setText(url);
+                        nameTextField.setText(name);
+                        emailTextField.setText(email);
+                        affiliationsTextField.setText(affiliations);
                     }
+
                         conn.close();
 
                 } catch (SQLException ex) {
@@ -60,6 +73,11 @@ public class DBFilter {
                         String email = res.getString("email");
                         String affiliations = res.getString("affiliatios");
                         textPane1.setText("\nAuthor ID:" + author_id +"\n"+url+ "\nName: " + name + "\nEmail: " + email + "\nAffiliation: " +affiliations);
+                        authorIDTextField.setText(author_id);
+                        URLTextField.setText(url);
+                        nameTextField.setText(name);
+                        emailTextField.setText(email);
+                        affiliationsTextField.setText(affiliations);
                     }
                         conn.close();
 
@@ -83,9 +101,44 @@ public class DBFilter {
                         String email = res.getString("email");
                         String affiliations = res.getString("affiliatios");
                         textPane1.setText("\nAuthor ID:" + author_id +"\n"+url+ "\nName: " + name + "\nEmail: " + email + "\nAffiliation: " +affiliations);
+                        authorIDTextField.setText(author_id);
+                        URLTextField.setText(url);
+                        nameTextField.setText(name);
+                        emailTextField.setText(email);
+                        affiliationsTextField.setText(affiliations);
                     }
                         conn.close();
 
+                } catch (SQLException ex) {
+                    throw new RuntimeException(ex);
+                }
+            }
+        });
+        editarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                DBModel db = new DBModel();
+                try {
+                    Connection conn = db.connect();
+                    DBController controller = new DBController(conn);
+                    controller.update(authorIDTextField.getText(), URLTextField.getText(), nameTextField.getText(), emailTextField.getText(), affiliationsTextField.getText());
+                    textPane1.setText("Se actualizo la informacion correctamente.");
+                    conn.close();
+                } catch (SQLException ex) {
+                    throw new RuntimeException(ex);
+                }
+            }
+        });
+        eliminarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                DBModel db = new DBModel();
+                try {
+                    Connection conn = db.connect();
+                    DBController controller = new DBController(conn);
+                    controller.delete(authorIDTextField.getText());
+                    textPane1.setText("Eliminado correctamente.");
+                    conn.close();
                 } catch (SQLException ex) {
                     throw new RuntimeException(ex);
                 }
