@@ -7,7 +7,7 @@ import java.net.URL;
 
 public class ApiController {
     String BASE_URL = "https://serpapi.com/search.json?";
-    String API_KEY = "5e9343e251a0114aaa7211082c7a18bc3dccf24f0719dc06a7780c14c8a92ef7";
+    String API_KEY = "yourAPIKey"; //Cambiar por tu ApiKey
     String PROFILE_ENGINE = "engine=google_scholar_profiles";
     String AUTHOR_ENGINE = "engine=google_scholar_author";
 

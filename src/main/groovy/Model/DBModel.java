@@ -9,7 +9,7 @@ public class DBModel {
     String database = "investigacion";
     String host = "jdbc:mysql://localhost:3306/" + database;
     String user = "root";
-    String password = "pass"; //Cambiar por la contrasenia de tu servidor local.
+    String password = "yourPass!"; //Cambiar por la contrasenia de tu servidor local.
 
 
     //Retorna una conexión con la DB local.

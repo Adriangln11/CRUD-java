@@ -3,6 +3,7 @@ package View;
 import Controller.DBController;
 import Model.DBModel;
 
+import javax.naming.ldap.Control;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -27,6 +28,7 @@ public class DBFilter {
     private JButton editarButton;
     private JButton eliminarButton;
     private JTextPane textPane1;
+    private JButton mostrarTodosButton;
 
     public DBFilter() {
         buscarButton.addActionListener(new ActionListener() {
@@ -138,6 +140,35 @@ public class DBFilter {
                     DBController controller = new DBController(conn);
                     controller.delete(authorIDTextField.getText());
                     textPane1.setText("Eliminado correctamente.");
+                    conn.close();
+                } catch (SQLException ex) {
+                    throw new RuntimeException(ex);
+                }
+            }
+        });
+        mostrarTodosButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                DBModel db = new DBModel();
+                try {
+                    Connection conn = db.connect();
+                    DBController controller = new DBController(conn);
+                    ResultSet res = controller.selectAll();
+                    String author_id = "";
+                    String url = "";
+                    String name ="";
+                    String email = "";
+                    String affiliations = "";
+                    String str = "";
+                    while(res.next()){
+                        author_id = res.getString("author_id");
+                        url = res.getString("url");
+                        name = res.getString("name");
+                        email = res.getString("email");
+                        affiliations = res.getString("affiliatios");
+                        str += "\nAuthor ID:" + author_id +"\n"+url+ "\nName: " + name + "\nEmail: " + email + "\nAffiliation: " +affiliations;
+                        textPane1.setText(str);
+                    }
                     conn.close();
                 } catch (SQLException ex) {
                     throw new RuntimeException(ex);

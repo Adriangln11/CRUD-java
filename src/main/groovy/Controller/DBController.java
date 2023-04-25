@@ -44,6 +44,11 @@ public class DBController {
         statement.setString(1, name);
         return statement.executeQuery();
     }
+    public ResultSet selectAll() throws SQLException {
+        String query = "SELECT * FROM autores";
+        PreparedStatement statement = this.connection.prepareStatement(query);
+        return statement.executeQuery();
+    }
     public void update(String author_id, String url, String name, String email, String affiliations) throws SQLException {
         String query = "UPDATE autores SET author_id = ?, url = ?, name = ?, email = ?, affiliatios = ? WHERE author_id = ?";
         PreparedStatement statement = this.connection.prepareStatement(query);
