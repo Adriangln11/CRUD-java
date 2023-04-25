@@ -13,7 +13,9 @@
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-3092272"/>
+        </properties>
         <border type="none"/>
         <children>
           <component id="7ffd8" class="javax.swing.JLabel">
@@ -64,19 +66,13 @@
             </constraints>
             <properties/>
           </component>
-          <component id="acbfc" class="javax.swing.JButton" binding="buscarButton" default-binding="true">
-            <constraints>
-              <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <text value="Buscar"/>
-            </properties>
-          </component>
           <component id="fc655" class="javax.swing.JButton" binding="buscarButton1" default-binding="true">
             <constraints>
               <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-13462598"/>
+              <foreground color="-1"/>
               <text value="Buscar"/>
             </properties>
           </component>
@@ -85,6 +81,8 @@
               <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-13462598"/>
+              <foreground color="-1773057"/>
               <text value="Buscar"/>
             </properties>
           </component>
@@ -103,7 +101,9 @@
             <constraints>
               <grid row="3" column="1" row-span="1" col-span="3" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-3092272"/>
+            </properties>
             <border type="none"/>
             <children>
               <component id="3e2c4" class="javax.swing.JTextPane" binding="textPane1" default-binding="true">
@@ -112,7 +112,9 @@
                     <preferred-size width="150" height="50"/>
                   </grid>
                 </constraints>
-                <properties/>
+                <properties>
+                  <background color="-3092272"/>
+                </properties>
               </component>
               <component id="b8ec" class="javax.swing.JLabel">
                 <constraints>
@@ -129,7 +131,9 @@
             <constraints>
               <grid row="3" column="4" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-3092272"/>
+            </properties>
             <border type="none"/>
             <children>
               <component id="a2778" class="javax.swing.JTextField" binding="authorIDTextField" default-binding="true">
@@ -187,6 +191,9 @@
                   <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
+                  <background color="-13462598"/>
+                  <enabled value="true"/>
+                  <foreground color="-1773057"/>
                   <text value="Editar"/>
                 </properties>
               </component>
@@ -195,6 +202,9 @@
                   <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
+                  <background color="-13462598"/>
+                  <enabled value="true"/>
+                  <foreground color="-1773057"/>
                   <text value="Eliminar"/>
                 </properties>
               </component>
@@ -245,6 +255,16 @@
               <grid row="4" column="4" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
             </constraints>
           </vspacer>
+          <component id="acbfc" class="javax.swing.JButton" binding="buscarButton" default-binding="true">
+            <constraints>
+              <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-13462598"/>
+              <foreground color="-1"/>
+              <text value="Buscar"/>
+            </properties>
+          </component>
         </children>
       </grid>
     </children>

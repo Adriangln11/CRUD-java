@@ -8,6 +8,7 @@ public class PrincipalP {
     private JPanel panel1;
     private JButton buscarEnAPIButton;
     private JButton buscarEnDBButton;
+    private JPanel panel2;
 
     //Se abre una nueva vista dependiendo del boton presionado.
     public PrincipalP() {
@@ -38,5 +39,6 @@ public class PrincipalP {
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
+
 
 }
